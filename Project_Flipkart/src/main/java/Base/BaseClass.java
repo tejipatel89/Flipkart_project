@@ -4,13 +4,14 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.Test;
 
 public class BaseClass {
 	
 	public static WebDriver driver;
 
-
-	public static void main(String[] args) {
+@Test
+	public static void BB() {
 		// TODO Auto-generated method stub
 
 		//System.setProperty("webdriver.chrome.driver", "E:\\Selenium\\Selenium Project\\345dipuo\\chromedriver.exe");
