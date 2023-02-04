@@ -12,7 +12,7 @@ public class BaseClass {
 
 @Test
 	public static void BB() {
-		// TODO Auto-generated method stub
+		
 
 		//System.setProperty("webdriver.chrome.driver", "E:\\Selenium\\Selenium Project\\345dipuo\\chromedriver.exe");
 
