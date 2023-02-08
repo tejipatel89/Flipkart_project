@@ -4,13 +4,16 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
-public class BaseClass {
+import Config.Environmenturls;
+
+public class BaseClass extends Environmenturls {
 	
 	public static WebDriver driver;
 
-@Test
+	@BeforeSuite
 	public static void BB() {
 		
 
