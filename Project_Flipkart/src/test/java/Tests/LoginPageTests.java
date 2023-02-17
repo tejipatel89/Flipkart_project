@@ -15,4 +15,15 @@ public class LoginPageTests extends BaseClass {
 		a.login("9168750957", "passwordoftej");
 		
 	}
+	
+	@Test(priority = 2)
+	public void verifyelements() {
+		LoginPage b = new LoginPage(driver);
+		b.verifyelements();
+		
+		
+	}
+	
+	
+	
 }
