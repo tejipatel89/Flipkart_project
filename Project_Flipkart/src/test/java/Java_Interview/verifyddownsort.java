@@ -34,9 +34,9 @@ public class verifyddownsort {
 
 		List<String> Act = new ArrayList<String>();
 
-		for (WebElement optss : opts) {
+		for (WebElement temp1 : opts) {
 
-			Act.add((optss.getText()));
+			Act.add((temp1.getText()));
 		}
 		
 		Act.remove("Select");
@@ -50,11 +50,11 @@ public class verifyddownsort {
 //		}
 		
 		temp.remove("Select");
-		//Collections.sort(temp);
+		Collections.sort(temp);
 		
 		System.out.println("List After Sorting temp" + temp);
 		
-		boolean abc =temp.equals(opts);
+		boolean abc =temp.equals(Act);
 		
 		
 		
