@@ -23,23 +23,23 @@ public class BaseClass extends Environmenturls {
 	public static void BB() {
 		
 
-		System.setProperty("webdriver.chrome.driver", "F:\\Selenium\\Selenium Project\\345dipuo\\chromedriver.exe");
-		
-		ChromeOptions opt = new ChromeOptions();
-		opt.addArguments("--Incognito");
-		DesiredCapabilities caps = new DesiredCapabilities();
-		caps.setCapability(ChromeOptions.CAPABILITY, opt);
-		 driver = new ChromeDriver(caps);
+//		System.setProperty("webdriver.chrome.driver", "F:\\Selenium\\Selenium Project\\345dipuo\\chromedriver.exe");
+//		ChromeOptions opt = new ChromeOptions();
+//		opt.addArguments("--Incognito");
+//		DesiredCapabilities caps = new DesiredCapabilities();
+//		caps.setCapability(ChromeOptions.CAPABILITY, opt);
+//		 driver = new ChromeDriver(caps);
 				
 			
-//		    System.setProperty("webdriver.gecko.driver", "F:\\Framework_new\\geckodriver.exe");
-//			FirefoxOptions opt = new FirefoxOptions();
-//			opt.addArguments("-private");				
-//			DesiredCapabilities caps = new DesiredCapabilities();
-//			//caps.setCapability("moz.firefoxOptions", opt);
-//			caps.setCapability(FirefoxOptions.FIREFOX_OPTIONS, opt);				
-//			//webDriverManager.firefoxdriver()			
-//			//driver = new FirefoxDriver(caps);
+	    System.setProperty("webdriver.gecko.driver", "F:\\Framework_new\\geckodriver.exe");
+	    
+			FirefoxOptions opt = new FirefoxOptions();
+			opt.addArguments("-private");				
+		    DesiredCapabilities caps = new DesiredCapabilities();
+		    caps.setCapability(FirefoxOptions.FIREFOX_OPTIONS, opt);				
+			driver = new FirefoxDriver(caps);
+			
+			//driver = new FirefoxDriver();
 		 
 		 
 				
