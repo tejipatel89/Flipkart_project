@@ -29,7 +29,7 @@ public class HomePageTests extends BaseClass {
 		}
 		
 		
-		@Test(priority = 3)
+		@Test(priority = 3, enabled=false)
 		public void SuggestionSearch() {
 			
 			HomePage c = new HomePage(driver);

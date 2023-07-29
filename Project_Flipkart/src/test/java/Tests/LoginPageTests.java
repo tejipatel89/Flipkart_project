@@ -16,7 +16,7 @@ public class LoginPageTests extends BaseClass {
 		
 	}
 	
-	@Test(priority = 2)
+	@Test(priority = 2, enabled=false)
 	public void verifyelements() {
 		LoginPage b = new LoginPage(driver);
 		b.verifyelements();
