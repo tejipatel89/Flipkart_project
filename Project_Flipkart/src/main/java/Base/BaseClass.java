@@ -10,6 +10,8 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import Config.Environmenturls;
@@ -18,19 +20,22 @@ public class BaseClass extends Environmenturls {
 	
 	public static WebDriver driver;
 
-	@SuppressWarnings("deprecation")
-	@BeforeSuite
-	public static void BB() {
+	@SuppressWarnings("deprecation")	
+	@BeforeTest
+	@Parameters("BrowserName")
+	public static void BB(String browser) {
 		
-
-//		System.setProperty("webdriver.chrome.driver", "F:\\Selenium\\Selenium Project\\345dipuo\\chromedriver.exe");
-//		ChromeOptions opt = new ChromeOptions();
-//		opt.addArguments("--Incognito");
-//		DesiredCapabilities caps = new DesiredCapabilities();
-//		caps.setCapability(ChromeOptions.CAPABILITY, opt);
-//		 driver = new ChromeDriver(caps);
+if (browser.equalsIgnoreCase("Chrome")) {
+		System.setProperty("webdriver.chrome.driver", "F:\\Selenium\\Selenium Project\\345dipuo\\chromedriver.exe");
+		ChromeOptions opt = new ChromeOptions();
+		opt.addArguments("--Incognito");
+		DesiredCapabilities caps = new DesiredCapabilities();
+		caps.setCapability(ChromeOptions.CAPABILITY, opt);
+		 driver = new ChromeDriver(caps); 
+		 
+}
 				
-			
+else if (browser.equalsIgnoreCase("firefox")) {
 	    System.setProperty("webdriver.gecko.driver", "F:\\Framework_new\\geckodriver.exe");
 	    
 			FirefoxOptions opt = new FirefoxOptions();
@@ -40,7 +45,7 @@ public class BaseClass extends Environmenturls {
 			driver = new FirefoxDriver(caps);
 			
 			//driver = new FirefoxDriver();
-		 
+			}
 		 
 				
 				System.out.println("Browser Launched");
