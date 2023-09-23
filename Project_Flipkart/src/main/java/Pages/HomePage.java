@@ -232,7 +232,9 @@ public class HomePage {
 		for (int i = 1; i <= 6; i++) {
 
 			//WebElement ele = driver.findElement(By.xpath("//div[@id='nav-xshop']/a[" + i + "]"));
-			WebElement ele = driver.findElement(By.xpath("//div[@class='navFooterLine navFooterLinkLine navFooterPadItemLine']//a[@class='nav_a']"));
+			//WebElement ele = driver.findElement(By.xpath("//div[@class='navFooterLine navFooterLinkLine navFooterPadItemLine']//a[@class='nav_a']"));
+			
+			WebElement ele = driver.findElement(By.xpath("//div[@class='navFooterLine navFooterLinkLine navFooterPadItemLine']/ul/li[" +i+ "]/a[1]"));
 			
 			
 
