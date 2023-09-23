@@ -14,12 +14,21 @@ public class HomePageTests extends BaseClass {
 			
 			HomePage c = new HomePage(driver);
 			c.CheckMenus();
-			
-			
-			
+						
 		}
 		
+		
+		
 		@Test(priority = 2)
+		public void CheckFooterr() {
+			
+			HomePage c = new HomePage(driver);
+			c.CheckFooter();
+		
+		
+		}
+		
+		@Test(priority = 3)
 		public void searchitems() {
 			
 			HomePage c = new HomePage(driver);
@@ -29,7 +38,7 @@ public class HomePageTests extends BaseClass {
 		}
 		
 		
-		@Test(priority = 3, enabled=false)
+		@Test(priority = 4, enabled=false)
 		public void SuggestionSearch() {
 			
 			HomePage c = new HomePage(driver);
@@ -39,7 +48,7 @@ public class HomePageTests extends BaseClass {
 		}
 		
 		
-		@Test(priority = 4)
+		@Test(priority = 5)
 		public void sliderwindowselectprductt() {
 			
 			HomePage c = new HomePage(driver);
@@ -48,7 +57,7 @@ public class HomePageTests extends BaseClass {
 		
 		}
 		
-		@Test(priority = 5)
+		@Test(priority = 6)
 		public void verifySamsungChargerr() {
 			
 			HomePage c = new HomePage(driver);
@@ -57,6 +66,7 @@ public class HomePageTests extends BaseClass {
 		
 		}
 
+		
 	
 
 

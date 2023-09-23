@@ -45,6 +45,17 @@ public class HomePage {
 	By Samsung_chargr = By.xpath("//span[contains(text(), 'Samsung Original 25W Single Port')]");
 	
 	
+	By Foot1 = By.xpath("//a[text()= 'Australia']");
+	By Foot2 = By.xpath("//a[text()= 'Brazil']");
+	By Foot3 = By.xpath("//a[text()= 'Canada']");
+	By Foot4 = By.xpath("//a[text()= 'China']");
+	By Foot5 = By.xpath("//a[text()= 'France']");
+	By Foot6 = By.xpath("//a[text()= 'Germany']");
+	
+	
+	
+	
+	
 
 	public HomePage(WebDriver driver1) {
 		this.driver = driver1;
@@ -202,5 +213,50 @@ public class HomePage {
 		
 		
 	}
+	
+	public void CheckFooter() {
+
+		List<String> expected = new ArrayList<>();
+
+		expected.add(driver.findElement(Foot1).getText());
+		expected.add(driver.findElement(Foot2).getText());
+		expected.add(driver.findElement(Foot3).getText());
+		expected.add(driver.findElement(Foot4).getText());
+		expected.add(driver.findElement(Foot5).getText());
+		expected.add(driver.findElement(Foot6).getText());
+
+		System.out.println("Expected Menues sequence is as " + expected);
+
+		List<String> original1 = new ArrayList<String>();
+
+		for (int i = 1; i <= 6; i++) {
+
+			//WebElement ele = driver.findElement(By.xpath("//div[@id='nav-xshop']/a[" + i + "]"));
+			WebElement ele = driver.findElement(By.xpath("//div[@class='navFooterLine navFooterLinkLine navFooterPadItemLine']//a[@class='nav_a']"));
+			
+			
+
+			original1.add(ele.getText());
+
+		}
+
+		System.out.println("Menues sequence is as " + original1);
+
+		Boolean abc = expected.equals(original1);
+
+		System.out.println(abc);
+
+		if (abc) {
+
+			System.out.println("Menues Squence is proper");
+		} else {
+			System.out.println("Menues Squence is not proper");
+		}
+	}
+
+	
+	
+	
+	
 
 }
