@@ -60,8 +60,8 @@ public class HomePageTests extends BaseClass {
 		@Test(priority = 7)
 		public void VerifyLinks() {
 			
-			HomePage c = new HomePage(driver);
-			c.Linkscount();
+			HomePage D = new HomePage(driver);
+			D.Linkscount();
 		
 		
 		}
