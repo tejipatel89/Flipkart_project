@@ -52,6 +52,7 @@ public class HomePage {
 	By Foot5 = By.xpath("//a[text()= 'France']");
 	By Foot6 = By.xpath("//a[text()= 'Germany']");
 	
+	By links = By.xpath("//a");
 	
 	
 	
@@ -258,7 +259,15 @@ public class HomePage {
 
 	
 	
-	
+	public void Linkscount() {
+		
+		List<WebElement> linnk = driver.findElements(links);
+		
+		int Size = linnk.size();
+		System.out.println(Size);
+		
+		
+	}
 	
 
 }
