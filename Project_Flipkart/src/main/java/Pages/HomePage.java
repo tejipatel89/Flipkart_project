@@ -166,6 +166,19 @@ public class HomePage {
 	}
 	
 	
+    public void Linkscount() {
+		
+		List<WebElement> linnk = driver.findElements(links);
+		
+		int Sizee = linnk.size();
+		System.out.println(Sizee);
+		
+		
+	}
+	
+	
+	
+	
 	
 	public void verifySamsungCharger() {
 		
@@ -259,15 +272,7 @@ public class HomePage {
 
 	
 	
-	public void Linkscount() {
-		
-		List<WebElement> linnk = driver.findElements(links);
-		
-		int Size = linnk.size();
-		System.out.println(Size);
-		
-		
-	}
+	
 	
 
 }
