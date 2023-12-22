@@ -57,7 +57,7 @@ public class HomePageTests extends BaseClass {
 		
 		}
 		
-		@Test(priority = 7)
+		@Test
 		public void VerifyLinks() {
 			
 			HomePage D = new HomePage(driver);
