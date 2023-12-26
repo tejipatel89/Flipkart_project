@@ -168,7 +168,7 @@ public class HomePage {
 	
     public void Linkscount() {
 		
-		List<WebElement> linnk = driver.findElements(linkess);
+		List<WebElement> linnk = driver.findElements(links);
 		
 		int Sizee = linnk.size();
 		System.out.println("Links count is -"+Sizee);
