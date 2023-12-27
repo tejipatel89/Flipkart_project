@@ -1,5 +1,10 @@
 package Pages;
 
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -166,15 +171,48 @@ public class HomePage {
 	}
 	
 	
-    public void Linkscount() {
+    public void Linkscount() throws IOException {
 		
 		List<WebElement> linnk = driver.findElements(links);
 		
 		int Sizee = linnk.size();
 		System.out.println("Links count is -"+Sizee);
 		
-		
-	}
+		HttpURLConnection con = null;
+		for(WebElement element:linnk) {
+			String abc = element.getAttribute("href");
+			
+			URL url = new URL(abc);
+			URLConnection urlconnection = url.openConnection();
+			HttpURLConnection HttpURLConnection = (HttpURLConnection)urlconnection;
+			HttpURLConnection.setConnectTimeout(3000);
+			HttpURLConnection.connect();
+			if(HttpURLConnection.getResponseCode()==200) {
+				
+				System.out.println(abc + "-"+HttpURLConnection.getResponseMessage());
+				
+			}
+			
+			else {
+				
+				System.err.println(abc + "-"+HttpURLConnection.getResponseCode());
+				HttpURLConnection.disconnect();
+			}
+			
+//			if (url!=null&&!url.contains("javascript")) {
+//				
+//				con = (HttpURLConnection)(new URL(url)).openConnection();
+//				con.connect();
+//				con.setConnectTimeout(3000);
+//				int respcode = con.getResponseCode();
+//				System.out.println("Connection Status for url: "+url+ "is:"+respcode);
+			}
+			
+			
+			
+			
+			
+		}
 	
 	
 	

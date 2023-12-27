@@ -1,5 +1,8 @@
 package Tests;
 
+import java.io.IOException;
+import java.net.MalformedURLException;
+
 import org.testng.annotations.Test;
 
 import Base.BaseClass;
@@ -58,7 +61,7 @@ public class HomePageTests extends BaseClass {
 		}
 		
 		@Test(priority = 7)
-		public void VerifyLinks() {
+		public void VerifyLinks() throws IOException {
 			
 			HomePage D = new HomePage(driver);
 			D.Linkscount();
