@@ -14,6 +14,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.Color;
 
 public class HomePage {
 
@@ -59,6 +60,9 @@ public class HomePage {
 	
 	By links = By.xpath("//a");
 	
+	//WebElement webElement = driver.findElement(By.xpath(""));//You can use xpath, ID or name whatever you like
+	//webElement.sendKeys(Keys.TAB);
+	//webElement.sendKeys(Keys.ENTER);
 	
 	
 	
@@ -106,10 +110,25 @@ public class HomePage {
 
 	public void Searchitem(String item) {
 
+		System.out.println("FIrst we will see Color of search box");	
+		String C =  driver.findElement(SearchButton).getCssValue("Color");
+		Color Col = Color.fromString(C);
+				String Colr = Col.asHex();
+		System.out.println("Colour of the search button is "+Colr);
+		
+		
+		
+		
+		
 		System.out.println("Normal Search");
 		driver.findElement(Searchbox).sendKeys(item);
 		driver.findElement(SearchButton).click();
 		driver.findElement(SearchButton_clean).clear();
+		
+		
+		
+		
+		
 	}
 
 	public void SuggestionSearch(String item) {
