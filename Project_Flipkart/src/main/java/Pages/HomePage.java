@@ -57,7 +57,7 @@ public class HomePage {
 	By Foot5 = By.xpath("//a[text()= 'France']");
 	By Foot6 = By.xpath("//a[text()= 'Germany']");
 	
-	By links = By.xpath("//a..");
+	By links = By.xpath("//a");
 	
 	
 	
