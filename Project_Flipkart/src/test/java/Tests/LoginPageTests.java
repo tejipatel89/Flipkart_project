@@ -12,7 +12,7 @@ public class LoginPageTests extends BaseClass {
 		
 		driver.get(Amazone);
 		LoginPage a = new LoginPage(driver);
-		a.login("9168750957", "passwordoftej");
+		a.login("9168750957", "@ADPadp99");
 		
 	}
 	

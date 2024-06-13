@@ -45,7 +45,7 @@ if (browser.equalsIgnoreCase("Chrome")) {
 }
 				
 else if (browser.equalsIgnoreCase("Firefox")) {
-	    System.setProperty("webdriver.gecko.driver", "F:\\Framework_new\\geckodriver.exe");
+	    System.setProperty("webdriver.gecko.driver", "E:\\Framework_new\\geckodriver.exe");
 	    
 			//FirefoxOptions opt = new FirefoxOptions();
 			//opt.addArguments("-private");				
