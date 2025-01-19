@@ -59,7 +59,7 @@ else if (browser.equalsIgnoreCase("Firefox")) {
 		 
 				
 				System.out.println("Browser Launched");
-				System.out.println("Browser Launchedtestsdsds");
+				System.out.println("Browser Launchedtests");
 				driver.manage().window().maximize();
 				driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
