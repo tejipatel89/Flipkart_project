@@ -41,7 +41,7 @@ public class LoginPage {
 			driver.findElement(Continue).click();
 			driver.findElement(password).sendKeys(pas);
 			driver.findElement(SigninButton).click();
-			Thread.sleep(15000);
+			Thread.sleep(45000);
 			driver.findElement(SigninButton2).click();
 			String loginname2 =driver.findElement(Helloafter).getText();
 			System.out.println(loginname2);
