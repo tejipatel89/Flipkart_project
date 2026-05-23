@@ -8,7 +8,7 @@ import Pages.LoginPage;
 public class LoginPageTests extends BaseClass {
 
 	@Test(priority = 1)
-	public void AMlogin() {
+	public void AMlogin() throws InterruptedException {
 		
 		driver.get(Amazone);
 		LoginPage a = new LoginPage(driver);
@@ -16,7 +16,7 @@ public class LoginPageTests extends BaseClass {
 		
 	}
 	
-	@Test(priority = 2, enabled=false)
+	@Test(priority = 2, enabled=true)
 	public void verifyelements() {
 		LoginPage b = new LoginPage(driver);
 		b.verifyelements();

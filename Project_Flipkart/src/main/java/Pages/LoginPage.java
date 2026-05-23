@@ -17,31 +17,35 @@ public class LoginPage {
 		
 		
 		String Ele1= "All";
-		String Ele2 = "Amazon Pay";
+		String Ele2 = "& Orders";
 		String loginname  = "Tejbahadur";
 		
-		By mobileno =  By.xpath("//input[@id='ap_email']");     //input[@id='ap_email']
-		By Continue =  By.xpath("//input[@id='continue']");
-		By password =  By.xpath("//input[@id='ap_password']");
-		By SigninButton = By.xpath("//input[@id='signInSubmit']");
+		By mobileno =  By.xpath("//*[@id='ap_email_login']");     //input[@id='ap_email']
+		By Continue =  By.xpath("/html/body/div[1]/div[1]/div[2]/div/div/div/div/span/form/span/span/input");
+		By password =  By.xpath("//*[@id='ap_password']");
+		By SigninButton = By.xpath("//*[@id='signInSubmit']");
 		//WebElement ElementAll = driver.findElement(By.xpath("//i[@class='hm-icon nav-sprite']//following::span[text()='All']"));		
+		By SigninButton2 = By.xpath("//*[@id='auth-signin-button']");
 		By ElementAll = By.xpath("//i[@class='hm-icon nav-sprite']//following::span[text()='All']");		
 		//WebElement ElementAmazonepay = driver.findElement(By.xpath("//a[contains(@href, '/gp/sva/dashboard?ref_=nav_cs_apay')]"));		
-		By ElementAmazonepay = By.xpath("//a[contains(@href, '/gp/sva/dashboard?ref_=nav_cs_apay')]");
-	By Hellobefore =  By.xpath("//div[@class='nav-line-1-container']//following::span[text()='TEJBAHADUR']");
-			By Helloafter = By.xpath("//div[@class='nav-line-1-container']//following::span[text()='TEJBAHADUR']");
+		By ElementOrders = By.xpath("/html/body/div[1]/header/div[1]/div[1]/div[3]/div/a[1]/span[2]");
+	    By Hellobefore =  By.xpath("//div[@class='nav-line-1-container']//following::span[text()='TEJBAHADUR']");
+		By Helloafter = By.xpath("//*[@id='nav-link-accountList-nav-line-1']");
 		
 		public LoginPage(WebDriver driver1) {
 		this.driver = driver1;					}
 		
-		public void login(String id, String pas) {
+		public void login(String id, String pas) throws InterruptedException {
 
 			driver.findElement(mobileno).sendKeys(id);
 			driver.findElement(Continue).click();
 			driver.findElement(password).sendKeys(pas);
 			driver.findElement(SigninButton).click();
+			Thread.sleep(15000);
+			driver.findElement(SigninButton2).click();
 			String loginname2 =driver.findElement(Helloafter).getText();
 			System.out.println(loginname2);
+			Thread.sleep(65);
 			//Assert.assertEquals(loginname, loginname2);			
 			//System.out.println("Loginsucceeded ");
 			
@@ -59,11 +63,12 @@ public class LoginPage {
 			//System.out.println("All link is present. ");
 			
 			
-			String Ele22 =driver.findElement(ElementAmazonepay).getText();
+			String Ele22 =driver.findElement(ElementOrders).getText();
+			System.out.println("Element Found");
 			System.out.println(Ele22);
 			Assert.assertEquals(Ele2, Ele22);
 			
-			System.out.println("Amazon pay menu is present. ");
+			System.out.println("Orders menu is present. ");
 			
 			
 			
